@@ -1,0 +1,2385 @@
+Exception in thread Exception in thread Thread-1:
+Exception in thread Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Thread-1:
+Thread-1Traceback (most recent call last):
+:
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+        self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    pubsub.get_message(ignore_subscribe_messages=True,    response = self.parse_response(block=False, timeout=timeout)
+
+      File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+pubsub.get_message(ignore_subscribe_messages=True,  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    response = self.parse_response(block=False, timeout=timeout)    
+response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    if not block and not conn.can_read(timeout=timeout):    
+return self.read_from_socket(timeout=timeout,  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+            raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)return self._parser.can_read(timeout)return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,redis.exceptions.ConnectionError: Connection closed by server.
+
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    redis.exceptionsraise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR).
+ConnectionError: Connection closed by server.
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)Traceback (most recent call last):
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+/home/abhay/frappe-bench/env/lib/python3.10/site-packages/botocore/httpsession.py:19: DeprecationWarning: 'urllib3.contrib.pyopenssl' module is deprecated and will be removed in a future release of urllib3 2.x. Read more in this issue: https://github.com/urllib3/urllib3/issues/2680
+  from urllib3.contrib.pyopenssl import orig_util_SSLContext as SSLContext
+/home/abhay/frappe-bench/env/lib/python3.10/site-packages/botocore/httpsession.py:19: DeprecationWarning: 'urllib3.contrib.pyopenssl' module is deprecated and will be removed in a future release of urllib3 2.x. Read more in this issue: https://github.com/urllib3/urllib3/issues/2680
+  from urllib3.contrib.pyopenssl import orig_util_SSLContext as SSLContext
+/home/abhay/frappe-bench/env/lib/python3.10/site-packages/botocore/httpsession.py:19: DeprecationWarning: 'urllib3.contrib.pyopenssl' module is deprecated and will be removed in a future release of urllib3 2.x. Read more in this issue: https://github.com/urllib3/urllib3/issues/2680
+  from urllib3.contrib.pyopenssl import orig_util_SSLContext as SSLContext
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 427, in read_from_socket
+    bufflen = recv_into(self._sock, self._buffer)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/_compat.py", line 75, in recv_into
+    return sock.recv_into(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3977, in parse_response
+    result = Redis.parse_response(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 470, in read_response
+    self.read_from_socket()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 452, in read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 427, in read_from_socket
+    bufflen = recv_into(self._sock, self._buffer)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/_compat.py", line 75, in recv_into
+    return sock.recv_into(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3977, in parse_response
+    result = Redis.parse_response(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 470, in read_response
+    self.read_from_socket()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 452, in read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+Exception in thread Exception in thread Thread-1:
+Traceback (most recent call last):
+Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+        pubsub.get_message(ignore_subscribe_messages=True,pubsub.get_message(ignore_subscribe_messages=True,
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+        return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+return self._parser.can_read(timeout)
+      File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+return self.read_from_socket(timeout=timeout,    
+return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+        raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+
+redis.exceptions.redis.exceptionsConnectionError: .Connection closed by server.ConnectionError
+: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    click.Group(commands=commands)(prog_name="bench")
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 427, in read_from_socket
+    bufflen = recv_into(self._sock, self._buffer)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/_compat.py", line 75, in recv_into
+    return sock.recv_into(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3977, in parse_response
+    result = Redis.parse_response(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 470, in read_response
+    self.read_from_socket()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 452, in read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+Exception in thread Exception in thread Thread-1:
+Thread-1:
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()    
+self.run()  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+      File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+        if not block and not conn.can_read(timeout=timeout):response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+        return self._parser.can_read(timeout)if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)    return self._parser.can_read(timeout)
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+redis.exceptions    .return self.read_from_socket(timeout=timeout,ConnectionError: 
+Connection closed by server.  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 706, in send_packed_command
+    sendall(self._sock, item)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/_compat.py", line 9, in sendall
+    return sock.sendall(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3886, in _execute_transaction
+    connection.send_packed_command(all_cmds)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 717, in send_packed_command
+    raise ConnectionError("Error %s while writing to socket. %s." %
+redis.exceptions.ConnectionError: Error 104 while writing to socket. Connection reset by peer.
+Exception in thread Exception in thread Thread-1Thread-1:
+:
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):    
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions    .return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+ConnectionError: Connection closed by server.
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 427, in read_from_socket
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 427, in read_from_socket
+        bufflen = recv_into(self._sock, self._buffer)bufflen = recv_into(self._sock, self._buffer)
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/_compat.py", line 75, in recv_into
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/_compat.py", line 75, in recv_into
+        return sock.recv_into(*args, **kwargs)
+return sock.recv_into(*args, **kwargs)
+ConnectionResetError: ConnectionResetError[Errno 104] Connection reset by peer: 
+[Errno 104] Connection reset by peer
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+        exec(code, run_globals)return _run_code(code, main_globals, None,
+
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()    
+main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)    
+return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+        rv = self.invoke(ctx)rv = self.invoke(ctx)
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))    
+return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+        start_worker(start_worker(
+
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+        self.register_death()self.register_death()
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4019, in execute
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3894, in _execute_transaction
+    return execute(conn, stack, raise_on_error)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3977, in parse_response
+    self.parse_response(connection, '_')
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3977, in parse_response
+    result = Redis.parse_response(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 739, in read_response
+    result = Redis.parse_response(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 915, in parse_response
+    response = self._parser.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 470, in read_response
+    self.read_from_socket()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 452, in read_from_socket
+        raise ConnectionError("Error while reading from socket: %s" %response = connection.read_response()
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 470, in read_response
+    self.read_from_socket()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 452, in read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+/home/abhay/frappe-bench/env/lib/python3.10/site-packages/botocore/httpsession.py:19: DeprecationWarning: 'urllib3.contrib.pyopenssl' module is deprecated and will be removed in a future release of urllib3 2.x. Read more in this issue: https://github.com/urllib3/urllib3/issues/2680
+  from urllib3.contrib.pyopenssl import orig_util_SSLContext as SSLContext
+/home/abhay/frappe-bench/env/lib/python3.10/site-packages/botocore/httpsession.py:19: DeprecationWarning: 'urllib3.contrib.pyopenssl' module is deprecated and will be removed in a future release of urllib3 2.x. Read more in this issue: https://github.com/urllib3/urllib3/issues/2680
+  from urllib3.contrib.pyopenssl import orig_util_SSLContext as SSLContext
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+2023-10-30 14:10:37,283 Worker rq:worker:83fb14c5900e44bd896df0d1cad489ae.abhay-pc.5966.home-abhay-frappe-bench:default: found an unhandled exception, quitting...
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 427, in read_from_socket
+    bufflen = recv_into(self._sock, self._buffer)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/_compat.py", line 75, in recv_into
+    return sock.recv_into(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 613, in work
+    self.execute_job(job, queue)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 874, in execute_job
+    self.monitor_work_horse(job, queue)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 806, in monitor_work_horse
+    retpid, ret_val = self.wait_for_horse()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 451, in wait_for_horse
+    pid, stat = os.waitpid(self.horse_pid, 0)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 479, in request_stop
+    self._shutdown()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 488, in _shutdown
+    self.set_shutdown_requested_date()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 348, in set_shutdown_requested_date
+    self.connection.hset(self.key, 'shutdown_requested_date', utcformat(utcnow()))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3050, in hset
+    return self.execute_command('HSET', name, *items)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 470, in read_response
+    self.read_from_socket()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 452, in read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+Exception in thread Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+Thread-1  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+:
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+Traceback (most recent call last):
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.    
+self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+2023-10-30 14:10:52,835 Worker rq:worker:83fb14c5900e44bd896df0d1cad489ae.abhay-pc.5966.home-abhay-frappe-bench:default: error while executing failure callback
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1198, in get_connection
+    if connection.can_read():
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 1086, in perform_job
+    self.handle_job_success(job=job,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 1017, in handle_job_success
+    pipeline.watch(job.dependents_key)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4041, in watch
+    return self.execute_command('WATCH', *names)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3822, in execute_command
+    return self.immediate_execute_command(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3836, in immediate_execute_command
+    conn = self.connection_pool.get_connection(command_name,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1202, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 1096, in perform_job
+    self.execute_failure_callback(job)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 1057, in execute_failure_callback
+    job.heartbeat(utcnow(), CALLBACK_TIMEOUT)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/job.py", line 471, in heartbeat
+    connection.hset(self.key, 'last_heartbeat', utcformat(self.last_heartbeat))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3050, in hset
+    return self.execute_command('HSET', name, *items)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+2023-10-30 14:10:52,877 Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1198, in get_connection
+    if connection.can_read():
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 1086, in perform_job
+    self.handle_job_success(job=job,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 1017, in handle_job_success
+    pipeline.watch(job.dependents_key)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4041, in watch
+    return self.execute_command('WATCH', *names)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3822, in execute_command
+    return self.immediate_execute_command(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3836, in immediate_execute_command
+    conn = self.connection_pool.get_connection(command_name,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1202, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 1096, in perform_job
+    self.execute_failure_callback(job)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 1057, in execute_failure_callback
+    job.heartbeat(utcnow(), CALLBACK_TIMEOUT)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/job.py", line 471, in heartbeat
+    connection.hset(self.key, 'last_heartbeat', utcformat(self.last_heartbeat))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3050, in hset
+    return self.execute_command('HSET', name, *items)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1198, in get_connection
+    if connection.can_read():
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 1086, in perform_job
+    self.handle_job_success(job=job,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 1017, in handle_job_success
+    pipeline.watch(job.dependents_key)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4041, in watch
+    return self.execute_command('WATCH', *names)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3822, in execute_command
+    return self.immediate_execute_command(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3836, in immediate_execute_command
+    conn = self.connection_pool.get_connection(command_name,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1202, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+/home/abhay/frappe-bench/env/lib/python3.10/site-packages/botocore/httpsession.py:19: DeprecationWarning: 'urllib3.contrib.pyopenssl' module is deprecated and will be removed in a future release of urllib3 2.x. Read more in this issue: https://github.com/urllib3/urllib3/issues/2680
+  from urllib3.contrib.pyopenssl import orig_util_SSLContext as SSLContext
+Exception in thread Thread-1Exception in thread Thread-1:
+Traceback (most recent call last):
+:
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Traceback (most recent call last):
+Exception in thread   File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+        response = self.parse_response(block=False, timeout=timeout)pubsub.get_message(ignore_subscribe_messages=True,
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+        if not block and not conn.can_read(timeout=timeout):  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+redis.exceptions    .return self._parser.can_read(timeout)ConnectionError: Connection closed by server.
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+Traceback (most recent call last):
+if not block and not conn.can_read(timeout=timeout):  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.    ConnectionErrorsock = self._connect(): 
+Connection closed by server.  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+redis.exceptions    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+.ConnectionRefusedErrorConnectionError: : [Errno 111] Connection refusedConnection closed by server.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    exec(code, run_globals)
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    return _process_result(sub_ctx.command.invoke(sub_ctx))    
+rv = self.invoke(ctx)  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return callback(*args, **kwargs)
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+        self.register_death()
+self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 427, in read_from_socket
+    bufflen = recv_into(self._sock, self._buffer)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/_compat.py", line 75, in recv_into
+    return sock.recv_into(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3977, in parse_response
+    result = Redis.parse_response(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 470, in read_response
+    self.read_from_socket()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 452, in read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+        pubsub.get_message(ignore_subscribe_messages=True,response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+        response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionErrorTraceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+:     Connection closed by server.sock = self._connect()
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions    exec(code, run_globals)
+.    ConnectionErrorsock = self._connect(): 
+Connection closed by server.  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+/home/abhay/frappe-bench/env/lib/python3.10/site-packages/botocore/httpsession.py:19: DeprecationWarning: 'urllib3.contrib.pyopenssl' module is deprecated and will be removed in a future release of urllib3 2.x. Read more in this issue: https://github.com/urllib3/urllib3/issues/2680
+  from urllib3.contrib.pyopenssl import orig_util_SSLContext as SSLContext
+/home/abhay/frappe-bench/env/lib/python3.10/site-packages/botocore/httpsession.py:19: DeprecationWarning: 'urllib3.contrib.pyopenssl' module is deprecated and will be removed in a future release of urllib3 2.x. Read more in this issue: https://github.com/urllib3/urllib3/issues/2680
+  from urllib3.contrib.pyopenssl import orig_util_SSLContext as SSLContext
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 427, in read_from_socket
+    bufflen = recv_into(self._sock, self._buffer)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/_compat.py", line 75, in recv_into
+    return sock.recv_into(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3977, in parse_response
+    result = Redis.parse_response(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 470, in read_response
+    self.read_from_socket()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 452, in read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+Exception in thread Thread-1:
+Exception in thread Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,    
+self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    response = self.parse_response(block=False, timeout=timeout)
+      File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+        response = self.parse_response(block=False, timeout=timeout)if not block and not conn.can_read(timeout=timeout):
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+        return self._parser.can_read(timeout)return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+
+redis.exceptions.ConnectionError: Connection closed by server.  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 427, in read_from_socket
+    bufflen = recv_into(self._sock, self._buffer)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/_compat.py", line 75, in recv_into
+    return sock.recv_into(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3977, in parse_response
+    result = Redis.parse_response(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 470, in read_response
+    self.read_from_socket()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 452, in read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Traceback (most recent call last):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+        self.run()sock = self._connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+        raise errpubsub.get_message(ignore_subscribe_messages=True,
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+    Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    main()
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+redis.exceptions.ConnectionError    : return self.main(*args, **kwargs)Connection closed by server.
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):Traceback (most recent call last):
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError    : Connection closed by server.sock = self._connect()
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 109, in <module>
+    main()
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/commands/scheduler.py", line 206, in start_worker
+    start_worker(
+  File "/home/abhay/frappe-bench/apps/frappe/frappe/utils/background_jobs.py", line 268, in start_worker
+    worker.work(
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 644, in work
+    self.register_death()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/rq/worker.py", line 344, in register_death
+    p.execute()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11000. Connection refused.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+        self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+        return self._parser.can_read(timeout)
+      File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+return self._parser.can_read(timeout)
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+return self._parser.can_read(timeout)    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError:     Connection closed by server.raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+
+redis.exceptions.ConnectionError: Connection closed by server.
+
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 416, in can_read
+    return self.read_from_socket(timeout=timeout,
+  File "/home/abhay/frappe-bench/env/lib/python3.10/site-packages/redis/connection.py", line 429, in read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.

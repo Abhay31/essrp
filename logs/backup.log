@@ -1,0 +1,234 @@
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231010_120003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-10 12:00:11.424987
+Config  : ./essentia.dev/private/backups/20231010_120003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231010_120003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231010_180003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-10 18:00:10.146716
+Config  : ./essentia.dev/private/backups/20231010_180003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231010_180003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231011_000003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-11 00:00:07.013842
+Config  : ./essentia.dev/private/backups/20231011_000003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231011_000003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231012_000004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-12 00:00:10.481608
+Config  : ./essentia.dev/private/backups/20231012_000004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231012_000004-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231012_120003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-12 12:00:06.552697
+Config  : ./essentia.dev/private/backups/20231012_120003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231012_120003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231013_000003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-13 00:00:06.488519
+Config  : ./essentia.dev/private/backups/20231013_000003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231013_000003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231013_120004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-13 12:00:16.208730
+Config  : ./essentia.dev/private/backups/20231013_120004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231013_120004-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231013_180003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-13 18:00:14.064823
+Config  : ./essentia.dev/private/backups/20231013_180003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231013_180003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231014_000003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-14 00:00:11.762751
+Config  : ./essentia.dev/private/backups/20231014_000003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231014_000003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231016_000003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-16 00:00:07.122068
+Config  : ./essentia.dev/private/backups/20231016_000003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231016_000003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231016_120003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-16 12:00:07.274139
+Config  : ./essentia.dev/private/backups/20231016_120003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231016_120003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231016_180003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-16 18:00:08.001777
+Config  : ./essentia.dev/private/backups/20231016_180003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231016_180003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231017_120003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-17 12:00:06.445487
+Config  : ./essentia.dev/private/backups/20231017_120003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231017_120003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231017_180003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-17 18:00:06.254945
+Config  : ./essentia.dev/private/backups/20231017_180003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231017_180003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231018_000004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-18 00:00:09.028252
+Config  : ./essentia.dev/private/backups/20231018_000004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231018_000004-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231018_180004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-18 18:00:06.616916
+Config  : ./essentia.dev/private/backups/20231018_180004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231018_180004-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231019_000005-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-19 00:00:11.628440
+Config  : ./essentia.dev/private/backups/20231019_000005-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231019_000005-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231020_000005-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-20 00:00:16.048895
+Config  : ./essentia.dev/private/backups/20231020_000005-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231020_000005-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231020_120003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-20 12:00:07.136341
+Config  : ./essentia.dev/private/backups/20231020_120003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231020_120003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231021_000004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-21 00:00:06.974181
+Config  : ./essentia.dev/private/backups/20231021_000004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231021_000004-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231022_000003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-22 00:00:05.653789
+Config  : ./essentia.dev/private/backups/20231022_000003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231022_000003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231022_120003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-22 12:00:05.429824
+Config  : ./essentia.dev/private/backups/20231022_120003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231022_120003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231023_000003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-23 00:00:05.401015
+Config  : ./essentia.dev/private/backups/20231023_000003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231023_000003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231024_000004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-24 00:00:07.436559
+Config  : ./essentia.dev/private/backups/20231024_000004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231024_000004-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231025_000004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-25 00:00:08.116487
+Config  : ./essentia.dev/private/backups/20231025_000004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231025_000004-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231025_180003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-25 18:00:05.401194
+Config  : ./essentia.dev/private/backups/20231025_180003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231025_180003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231026_180003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-26 18:00:05.798497
+Config  : ./essentia.dev/private/backups/20231026_180003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231026_180003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231027_000004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-27 00:00:15.172614
+Config  : ./essentia.dev/private/backups/20231027_000004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231027_000004-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231027_120004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-27 12:00:13.140760
+Config  : ./essentia.dev/private/backups/20231027_120004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231027_120004-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231027_180003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-27 18:00:06.475199
+Config  : ./essentia.dev/private/backups/20231027_180003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231027_180003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231028_120003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-28 12:00:07.136700
+Config  : ./essentia.dev/private/backups/20231028_120003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231028_120003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231028_180004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-28 18:00:20.685539
+Config  : ./essentia.dev/private/backups/20231028_180004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231028_180004-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231030_000006-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-30 00:00:13.497721
+Config  : ./essentia.dev/private/backups/20231030_000006-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231030_000006-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231030_120005-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-30 12:00:12.099027
+Config  : ./essentia.dev/private/backups/20231030_120005-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231030_120005-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231030_180003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-30 18:00:21.107831
+Config  : ./essentia.dev/private/backups/20231030_180003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231030_180003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231031_000003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-31 00:00:06.717441
+Config  : ./essentia.dev/private/backups/20231031_000003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231031_000003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231031_120003-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-10-31 12:00:06.268052
+Config  : ./essentia.dev/private/backups/20231031_120003-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231031_120003-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231101_000004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-11-01 00:00:07.511320
+Config  : ./essentia.dev/private/backups/20231101_000004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231101_000004-essentia_dev-database.sql.gz         1.2MiB
+Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231101_120002-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-11-01 12:00:03.424721
+Config  : ./essentia.dev/private/backups/20231101_120002-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231101_120002-essentia_dev-database.sql.gz         1.3MiB
+Backup for Site essentia.dev has been successfully completed

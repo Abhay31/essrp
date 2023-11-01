@@ -232,3 +232,9 @@ Backup Summary for essentia.dev at 2023-11-01 12:00:03.424721
 Config  : ./essentia.dev/private/backups/20231101_120002-essentia_dev-site_config_backup.json 158.0B
 Database: ./essentia.dev/private/backups/20231101_120002-essentia_dev-database.sql.gz         1.3MiB
 Backup for Site essentia.dev has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _e9c0726d8c8c1e0a -p********** _e9c0726d8c8c1e0a -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./essentia.dev/private/backups/20231101_180004-essentia_dev-database.sql.gz
+
+Backup Summary for essentia.dev at 2023-11-01 18:00:16.344358
+Config  : ./essentia.dev/private/backups/20231101_180004-essentia_dev-site_config_backup.json 158.0B
+Database: ./essentia.dev/private/backups/20231101_180004-essentia_dev-database.sql.gz         1.3MiB
+Backup for Site essentia.dev has been successfully completed
